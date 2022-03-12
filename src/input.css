@@ -15,11 +15,12 @@
 
     .grid-card-img {
         @apply w-full h-full bg-cover bg-center absolute group-hover:scale-125 transition-all duration-500 group-hover:rotate-12;
-    }
+    }    
 }
 
 @layer utilities {
     #toggle:checked ~ label div.toggle-circle {
         @apply translate-x-3;
     }
+    
 }
