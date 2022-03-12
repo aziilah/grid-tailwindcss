@@ -1,1 +1,3 @@
-# grid-tailwindcss
+# Run the project
+
+npm run dev
