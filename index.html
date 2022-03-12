@@ -13,53 +13,79 @@
     <script></script>    
 </head>
 
-<h2 class="mt-10 mb-10 text-center font-bold text-3xl"><span class="bg-gradient-to-r from-blue-500 to-teal-400 bg-clip-text text-transparent">My Gallery</span></h2>
+<body class="dark:bg-slate-800 m-10">
 
-<div class="mt-10 font-inter grid grid-cols-2 gap-2 md:grid-cols-4 md:gap-4 md:p-4">
+    <!-- Dark Mode -->
+    <div class="flex justify-end mt-10 ">
+        <span class="text-sm text-slate-500 mr-2">Light</span>
+        <input type="checkbox" id="toggle" class="hidden">
+        <label for="toggle">
+            <div class="w-9 h-5 bg-slate-500 rounded-full flex items-center p-1 cursor-pointer">
+                <div class="w-4 h-4 bg-white rounded-full toggle-circle">
+                </div>
+            </div>
+        </label>
+        <span class="text-sm text-slate-500 ml-2">Dark</span>
+    </div>     
+
+    <h2 class="mt-10 mb-10 text-center font-bold text-3xl"><span class="bg-gradient-to-r from-blue-500 to-teal-400 bg-clip-text text-transparent">My Gallery</span></h2>
+
+    <div class="mt-10 font-inter grid grid-cols-2 gap-2 md:grid-cols-4 md:gap-4 md:p-4">
             
-    <h2 class="h-15 text-xl font-semibold text-teal-700 md:col-start-4 md:row-start-2 md:flex dark:text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600"><span class="self-center ">Welcome To My Gallery</span></h2>
-    <div class="h-15 text-lg font-bold text-teal-700 md:col-start-2 md:row-start-2 md:flex dark:text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600"><span class="self-end">@aziilah</span></div>
+        <h2 class="h-15 text-xl font-semibold text-teal-700 md:col-start-4 md:row-start-2 md:flex dark:text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600"><span class="self-center ">Welcome To My Gallery</span></h2>
+        <div class="h-15 text-lg font-bold text-teal-700 md:col-start-2 md:row-start-2 md:flex dark:text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600"><span class="self-end">@aziilah</span></div>
 
-    <div class="group grid-card">
-        <div class=" grid-card-img bg-[url('/img/grid/tech1.jpg')]"></div>
+        <div class="group grid-card">
+            <div class=" grid-card-img bg-[url('/img/grid/tech1.jpg')]"></div>
+        </div>
+
+        <div class="group grid-card md:col-start-3">
+            <div class="grid-card-img bg-[url('/img/grid/tech2.jpg')]"></div>
+        </div>
+
+        <div class="group grid-card">
+            <div class="grid-card-img bg-[url('/img/grid/tech3.jpg')]"></div>
+        </div>
+
+        <div class="group grid-card">
+            <div class="grid-card-img bg-[url('/img/grid/tech4.jpg')]"></div>
+        </div>
+
+        <div class="group grid-card">
+            <div class="grid-card-img bg-[url('/img/grid/tech5.jpg')]"></div>
+        </div>
+
+        <div class="group grid-card md:col-start-2">
+            <div class="grid-card-img bg-[url('/img/grid/tech6.jpg')]"></div>
+        </div>
+
+        <div class="group grid-card md:col-start-4">
+            <div class="grid-card-img bg-[url('/img/grid/tech7.jpg')]"></div>
+        </div>
+
+        <div class="group grid-card">
+            <div class="grid-card-img bg-[url('/img/grid/tech8.jpg')]"></div>
+        </div>
+
+        <div class="group grid-card md:col-start-3">
+            <div class="grid-card-img bg-[url('/img/grid/tech9.jpg')]"></div>
+        </div>
+
+        <div class="group grid-card md:col-start-3">
+            <div class="grid-card-img bg-[url('/img/grid/tech10.jpg')]"></div>
+        </div>
+
     </div>
 
-    <div class="group grid-card md:col-start-3">
-        <div class="grid-card-img bg-[url('/img/grid/tech2.jpg')]"></div>
-    </div>
+    <script>
+        const checkbox = document.querySelector('#toggle');
+        const html= document.querySelector('html');
 
-    <div class="group grid-card">
-        <div class="grid-card-img bg-[url('/img/grid/tech3.jpg')]"></div>
-    </div>
-
-    <div class="group grid-card">
-        <div class="grid-card-img bg-[url('/img/grid/tech4.jpg')]"></div>
-    </div>
-
-    <div class="group grid-card">
-        <div class="grid-card-img bg-[url('/img/grid/tech5.jpg')]"></div>
-    </div>
-
-    <div class="group grid-card md:col-start-2">
-        <div class="grid-card-img bg-[url('/img/grid/tech6.jpg')]"></div>
-    </div>
-
-    <div class="group grid-card md:col-start-4">
-        <div class="grid-card-img bg-[url('/img/grid/tech7.jpg')]"></div>
-    </div>
-
-    <div class="group grid-card">
-        <div class="grid-card-img bg-[url('/img/grid/tech8.jpg')]"></div>
-    </div>
-
-    <div class="group grid-card md:col-start-3">
-        <div class="grid-card-img bg-[url('/img/grid/tech9.jpg')]"></div>
-    </div>
-
-    <div class="group grid-card md:col-start-3">
-        <div class="grid-card-img bg-[url('/img/grid/tech10.jpg')]"></div>
-    </div>
-
-</div>
+        checkbox.addEventListener('click', function() {
+            checkbox.checked ? html.classList.add('dark') : html.classList.remove('dark');
+        });
+    </script>
+    
+</body>
 
 </html>
